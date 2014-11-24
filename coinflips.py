@@ -29,10 +29,10 @@ while True:
 
 	if score >= int(record[0]):
 		f.seek(0)
+		f.truncate()
 		f.write(str(score) + "\n")
-		print("/nAnd congratulation! You are the highest score!")
+		print("\nAnd congratulation! You are the highest score!")
 		winner = raw_input("Please enter your name:")
-		record.remove(record[1])
 		f.write(winner)
 
 	f.close()
